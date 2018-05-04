@@ -283,6 +283,14 @@ button
 	right:0;
 	box-shadow: 4px 4px 0px #4A301D;
 }
+.fondinscri
+{
+	background : url('fondConnexion.png');
+	background-size :250px auto;
+	background-repeat : repeat-x;
+	z-index : 10;
+	background-position : center 442px;
+}
 
 .formu
 {
