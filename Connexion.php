@@ -71,13 +71,15 @@ if($_POST["mail"] != $_POST["pass"]){
 mysqli_close($BDD);
  // On affiche les erreurs :
 if($error == TRUE){ 
-  echo "<p align='center' style='color:red;'>".$errorMSG."</p>"; 
+echo '<script type="text/javascript">window.alert("'.$errorMSG.'");</script>';
 }
 if($registerOK == TRUE){ 
-  echo "<p align='center' style='color:green;'><strong>".$registerMSG."</strong></p>"; 
+  echo '<script type="text/javascript">window.alert("'.$registerMSG.'");</script>';
   
-  header('Location:Accueil.php');
+  
   } 
+   echo "<script language='javascript'>window.location = 'modifierprofil_affich.php';</script>";
+ 
 
 ?>
 

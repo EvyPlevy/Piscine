@@ -162,10 +162,8 @@ mysqli_close($BDD);
 if($error == TRUE){ echo '<script language="javascript">alert("'.$errorMSG.'")</script>'; }
 // Si l'inscription s'est bien déroulée on affiche le succès :
 if($registerOK == TRUE){ 
-echo '<script language="javascript">alert("Inscription réussie ! <br />Vous pouvez désormais vous connecter.")</script>';
-}
-
 echo '<script language="javascript">alert("'.$registerMSG.'")</script>';
+}
+ echo "<script language='javascript'>window.location = 'Connexion.html';</script>";
 
-//echo "<p align='center' style='color:green;'><strong>".$registerMSG."</strong></p>"; } 
 ?>
