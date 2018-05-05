@@ -48,7 +48,7 @@ if(isset($_POST["register"])){
 										if($_POST["mail"] != $_POST["pass"]){
 
 											 // Si tout ce passe correctement, on peut maintenant l'inscrire dans la base de données :
-											 $sql = "INSERT INTO `person` VALUES ('".$_POST["name"]."','".$_POST["surname"]."','".$_POST["mail"]."','".$_POST["pass"]."',1,'10-10-2018')";
+											 $sql = "INSERT INTO `person` VALUES (null,'".$_POST["name"]."','".$_POST["surname"]."','".$_POST["mail"]."','".$_POST["pass"]."',1,'20061224')";
 											
 											 $sql = mysqli_query($BDD,$sql);
 											 
