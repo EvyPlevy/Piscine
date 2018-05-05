@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
 $BDD = mysqli_connect("localhost","root","");
 mysqli_select_db($BDD,"plouf_plouf");
 
@@ -43,9 +42,28 @@ if($_POST["mail"] != $_POST["pass"]){
                               // On l'affiche un message pour le dire que l'inscription c'est bien déroulé :
       $registerMSG = "Connexion reussie";
 
-                              // On le met des variables de session pour stocker le nom de compte et le mot de passe :
+      // On  met des variables de session pour stocker le nom de compte et le mot de passe :
       $_SESSION["mail"] = $_POST["mail"];
       $_SESSION["pass"] = $_POST["pass"];
+
+
+      $sql = "SELECT Surname FROM person WHERE Mail = '".$_POST["mail"]."' ";
+      $nb = mysqli_query($BDD,$sql);
+      if ($row = $nb->fetch_assoc()) 
+      {
+        $nb= $row['Surname'];
+      }
+      $_SESSION["Surname"] = $nb;
+
+      $sql = "SELECT ID FROM person WHERE Mail = '".$_POST["mail"]."' ";
+      $nb = mysqli_query($BDD,$sql);
+      if ($row = $nb->fetch_assoc()) 
+      {
+        $nb= $row['ID'];
+      }
+      $_SESSION["ID"] = $nb;
+
+      
     }
 
     else{
@@ -58,10 +76,16 @@ if($_POST["mail"] != $_POST["pass"]){
 
 mysqli_close($BDD);
  // On affiche les erreurs :
-if($error == TRUE){ echo "<p align='center' style='color:red;'>".$errorMSG."</p>"; }
- // Si l'inscription s'est bien déroulée on affiche le succès :
-  if($registerOK == TRUE){ echo "<p align='center' style='color:green;'><strong>".$registerMSG."</strong></p>"; } 
-    ?>
+if($error == TRUE){ 
+  echo "<p align='center' style='color:red;'>".$errorMSG."</p>"; 
+}
+if($registerOK == TRUE){ 
+  echo "<p align='center' style='color:green;'><strong>".$registerMSG."</strong></p>"; 
+  
+  header('Location:Accueil.php');
+  } 
+
+?>
 
 
 

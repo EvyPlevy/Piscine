@@ -16,11 +16,11 @@
 	        <div id = "nav">
 				<div class="conteneur">
 					
-					<form action=" " method="post">
-					<label for="mail">Mail :</label>
-					<input type="text" name="mail" id="mail"/>
-					<label for="pass">Mot de passe :</label>
-					<input type="password" name="pass" id="pass"/>
+					<form action="Connexion.php" method="post">
+					<label for="mailing">Mail :</label>
+					<input type="text" name="mailing" id="mailing"/>
+					<label for="passw">Mot de passe :</label>
+					<input type="password" name="passw" id="passw"/>
 					<input type="submit" name="connect" value="Se connecter" class="bouton"/>
 					</form>
 				</div>
@@ -33,6 +33,7 @@
 	        <div id="inscription">
 			<div class="fondinscri">
 			 <form action="Inscription.php" method="post" class="formu">
+			 <?php die(); ?>
 			 <div class="inscristoi">Inscription</div>
 			<label for="Nom">Nom </label><br/>
 	            <input type="text" name="name" id="name"/><br/><br/>

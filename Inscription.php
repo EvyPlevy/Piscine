@@ -38,20 +38,24 @@ if(isset($_POST["register"])){
 					 // Si $sql est égal à 0 (c'est-à-dire qu'il n'y a pas de nom de compte avec la valeur tapé par l'utilisateur
 					 if($sql == 0){
 					 
-							// Si tout va bien on regarde si le mot de passe n'exède pas 60 caractères.
-							if(strlen($_POST["pass"] < 10)){
+							// Si tout va bien on regarde si le mot de passe n'exède pas 50 caractères.
+							if(strlen($_POST["pass"] < 50)){
 							
-								 // Si tout va bien on regarde si le nom de compte n'exède pas 60 caractères.
-								 if(strlen($_POST["mail"] < 40)){
+								 // Si tout va bien on regarde si le nom de compte n'exède pas 100 caractères.
+								 if(strlen($_POST["mail"] < 100)){
 								 
 										// Si le nom de compte et le mot de passe sont différent :
 										if($_POST["mail"] != $_POST["pass"]){
 
 											 // Si tout ce passe correctement, on peut maintenant l'inscrire dans la base de données :
-											 $sql = "INSERT INTO `person` VALUES (null,'".$_POST["name"]."','".$_POST["surname"]."','".$_POST["mail"]."','".$_POST["pass"]."',1,'20061224')";
-											
+										
+											 $sql = "INSERT INTO `person` VALUES (null,'".$_POST["name"]."','".$_POST["surname"]."','".$_POST["pass"]."','".$_POST["mail"]."',1,'20181010',1);";
 											 $sql = mysqli_query($BDD,$sql);
-											 
+											 $sql = "SELECT ID FROM person ORDER BY ID DESC LIMIT 1";
+											 $result = mysqli_query($BDD,$sql);
+											 $data=mysqli_fetch_assoc($result);
+											 $sql = "INSERT INTO `profile` VALUES (null, '20181010',0,0,0,'null','null','null','null','null','null','null','null','null','null','".$data['ID']."',0)";
+											 $result = mysqli_query($BDD,$sql);
 											 // Si la requête s'est bien effectué :
 											 if($sql){
 											 
@@ -162,7 +166,13 @@ if(isset($_POST["register"])){
 		
 mysqli_close($BDD);
 // On affiche les erreurs :
-if($error == TRUE){ echo "<p align='center' style='color:red;'>".$errorMSG."</p>"; }
+if($error == TRUE){ echo '<script language="javascript">alert("'.$errorMSG.'")</script>'; }
 // Si l'inscription s'est bien déroulée on affiche le succès :
-if($registerOK == TRUE){ echo "<p align='center' style='color:green;'><strong>".$registerMSG."</strong></p>"; } 
+if($registerOK == TRUE){ 
+echo '<script language="javascript">alert("message successfully sent")</script>';
+}
+
+echo "<script language='javascript'>window.location = 'Connexion.html';</script>";
+
+//echo "<p align='center' style='color:green;'><strong>".$registerMSG."</strong></p>"; } 
 ?>
