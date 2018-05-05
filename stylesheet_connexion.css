@@ -1,0 +1,324 @@
+/*icones*/
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  color:#d8d8db;
+  font-size: 1.8em;
+}
+
+/*polices*/
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Poiret+One|Six+Caps');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+/*fond de page*/
+body
+{
+	background: url('https://78.media.tumblr.com/tumblr_lsdjv9k5E21r2gm7fo5_400.png');
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+/*page de navigation*/
+#nav
+{
+	position : absolute;
+	align-items : center;
+	height: 50px;
+	background : #2d3f70;
+	width : 100%;
+	padding : 10px 0px 10px 0px;
+	top : 0;
+	left : 0;
+	color : white;
+	box-shadow: 0px 2px 7px #565656;
+	font-family : Abril Fatface;
+	z-index : 10;
+	border-bottom : 6px double white;
+
+}
+
+#nav .conteneur
+{
+	justify-content: flex-end;
+	right : 5px;
+	width : 98%;
+	height: 100%;
+    align-items: center;
+}
+
+#nav #mail
+{
+	margin-right : 10px;
+	margin-left:10px;
+}
+
+#nav #pass
+{
+	margin-right : 10px;
+	margin-left:10px;
+}
+
+.icones
+{
+	font-family : Pathway Gothic One;
+	font-size : 0.55em;
+	letter-spacing : 0.3em;
+	text-transform : uppercase;
+	text-align : center;
+	width : 50px;
+	color : white;
+}
+
+.icones [class*="fontawesome-"]
+{
+	font-family: 'FontAwesome', sans-serif;
+	color:#d8d8db;
+	letter-spacing : 0.3em;
+	font-size: 1.8em;
+	padding-bottom : 3px;
+}
+
+.idchamps .icones 
+{
+	display : flex;
+	justify-content: space-around;
+	width :250px;
+	padding-top:5px;
+}
+
+#menuVous
+{
+	overflow : hidden;
+	border-radius : 10px;
+}
+
+.elementsMenu{
+	display : none;
+	position : absolute;
+}
+
+.show{
+	display : block;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+.show a:hover{
+	display : block;
+	background : #DEDEDE;
+	
+}
+.show a
+{
+	-webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+	display : block;
+	padding: 5px;
+	text-decoration : none!important;
+	background : #8f92A3;
+	font-family : Raleway;
+	font-size : 13px;
+	width : 110px;
+	color : black;
+}
+
+.Vous
+{
+}
+
+.Vous .icones
+{
+	display:inline-block;
+	vertical-align : middle;
+}
+
+.arrow
+{
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #8f92A3;
+}
+
+#boite
+{
+	top : 70px;
+	position : absolute;
+	width : 100%;
+	left : 0;
+	height : calc(100% - 70px);
+}
+
+.conteneur
+{
+	
+	display : flex;
+}
+
+
+
+.couv 
+{
+	background : url('https://static.lexpress.fr/medias_8869/w_504,h_282,c_crop,x_3,y_8/w_2000,h_1125,c_fill,g_north/v1393343315/ciel-nuages-meteo_4541262.jpg');
+	background-size:cover;
+	background-size: cover;
+	height : 300px;
+	width : 100%;
+}
+
+.pdp
+{
+	width : 300px;
+	height : 300px;
+	background : url('https://i.gyazo.com/5fd079803365f41d8dbae875a5c4e0d4.png');
+	background-size: cover;
+	background-position : center center;
+	border-right : 1px solid black;
+}
+
+.monfondid
+{
+	background:url('fondid.jpg');
+	background-size:300px auto;
+	background-repeat : no-repeat;
+	background-position : center bottom;
+	height: 100%;
+	
+}
+.idchamps
+{
+	background: rgba(8,43,61,1);
+	width : 300px;
+	border-right : 1px solid black;
+	min-height : 300px;
+	height : 100%;
+}
+
+.contenuonglet
+{
+	min-height : 300px;
+	height: 100%;
+	width : 100%;
+}
+
+.conteneur2
+{
+	border-top:5px solid #291710;
+	display : flex;
+	min-height : 300px;
+	height : calc(100% - 300px);
+}
+
+.monid
+{
+	width: 250px;
+    height: 150px;
+    background: #ffffff85;
+    margin: auto;
+    left: 0;
+    right: 0;
+    box-shadow: 4px 4px 0px #d8d8db;
+	text-align : center;
+}
+	
+button
+{
+	background : white;
+	border: 3px solid white;
+	margin-bottom: 15px;
+}
+
+.nomPrenom
+{
+	font-family : Lobster;
+	font-size :25px;
+	line-height : 20px;
+}
+
+.email
+{
+	font-family : Poiret One;
+	font-size: 19px;
+    line-height: 15px;
+}
+
+.statut
+{
+	font-family : Raleway;
+	font-size : 16px;
+	padding-bottom : 10px;
+}
+
+.pays
+{
+	font-family : Raleway;
+	font-size : 13px;
+	padding : 10px;
+}
+
+#inscription
+{
+	width : 800px;
+	height: 500px;
+	border-radius : 10px;
+	background : white;
+	padding : 20px;
+	position : absolute;
+	margin : auto;
+	top : 0;
+	bottom : 0;
+	left:0;
+	right:0;
+	box-shadow: 4px 4px 0px #4A301D;
+}
+.fondinscri
+{
+	background : url('fondConnexion.png');
+	background-size :250px auto;
+	background-repeat : repeat-x;
+	z-index : 10;
+	background-position : center 442px;
+}
+
+.formu
+{
+	text-align : center;
+	margin:auto;
+	top:0;
+	bottom:0;
+	font-family : Abril Fatface;
+	color: #8F92A3;
+	font-size: 20px;
+	font-weight : light;
+}
+
+.formu .inscristoi
+{
+	color: #4A301D;
+    font-size: 50px;
+    font-family: Lobster;
+    background: #DEDEDE;
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    line-height: 15px;
+}
+
+.bouton
+{
+	background: #f9f9f9;
+    border: 1px solid #bfbfbf;
+    padding: 4px;
+}
