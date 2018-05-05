@@ -1,81 +1,55 @@
-	<html>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="stylesheet_connexion.css"> 
 
-	    <head>
-	    
-	        <title>Creation d'un formulaire d'inscription en HTML</title>
-	    
-	    </head>
-	    
-	    <body>
-	    
-	        <form action="Inscription.php" method="post">
-	        
-	            <table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Poiret+One|Six+Caps" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<title>Connexion</title>
+<script src="menuderoulant.js"></script>
+<!-- Coucou mes librairies -->
+</head>
+<body>
 
-	           	<tr>
+	        <div id = "nav">
+				<div class="conteneur">
+					
+					<form action="Connexion.php" method="post">
+					<label for="mail">Mail :</label>
+					<input type="mail" name="mail" id="mail"/>
+					<label for="pass">Mot de passe :</label>
+					<input type="password" name="pass" id="pass"/>
+					<input type="submit" name="connect" value="Se connecter" class="bouton"/>
+					</form>
+				</div>
+			</div>
 	            
-	            <td><label for="Nom"><strong>Nom :</strong></label></td>
-	            <td><input type="text" name="name" id="name"/></td>
-	            
-	            </tr>
 
-	            <tr>
+	       <div class="titrePage">Plouf plouf
+				<div class="subtitle">Laissez vous forcer !</div>
+			</div>
+	        <div id="inscription">
+			<div class="fondinscri">
+			 <form action="Inscription.php" method="post" class="formu">
+			 <div class="inscristoi">Inscription</div>
+			<label for="Nom">Nom </label><br/>
+	            <input type="text" name="name" id="name"/><br/><br/>
 	            
-	            <td><label for="¨Prenom"><strong>Prenom :</strong></label></td>
-	            <td><input type="text" name="surname" id="surname"/></td>
 	            
-	            </tr>
-	            
-	            <tr>
-	            
-	            <td><label for="mail"><strong>Mail :</strong></label></td>
-	            <td><input type="text" name="mail" id="mail"/></td>
-	            
-	            </tr>
-	            
-	            <tr>
-	            
-	            <td><label for="pass"><strong>Mot de passe :</strong></label></td>
-	            <td><input type="password" name="pass" id="pass"/></td>
-	            
-	            </tr>
-	            
-	            <tr>
-	            
-	            <td><label for="pass2"><strong>Confirmez le mot de passe :</strong></label></td> 
-	            <td><input type="password" name="pass2" id="pass2"/></td>
-	            
-	            </table>
-	        
-	        <input type="submit" name="register" value="S'inscrire"/>
-	        
-	        </form>
-
-
-
-	        <form action="Connexion.php" method="post">
-	        
-	            <table>
-
-	           	<tr>
-	                        
-	            <td><label for="mail"><strong>Mail :</strong></label></td>
-	            <td><input type="text" name="mail" id="mail"/></td>
-	            
-	            </tr>
-	            
-	            <tr>
-	            
-	            <td><label for="pass"><strong>Mot de passe :</strong></label></td>
-	            <td><input type="password" name="pass" id="pass"/></td>
-	            
-	            </tr>
-	        </table>
-	        <input type="submit" name="connect" value="Se connecter"/>
-	        
-	        </form>
-	    
-	    </body>
-
-	</html>
-
+			<label for="¨Prenom">Prenom </label><br/>
+			<input type="text" name="surname" id="surname"/><br/><br/>
+			<label for="mail">Mail </label><br/>
+			<input type="mail" name="mail" id="mail"/><br/><br/>
+			<label for="pass">Mot de passe </label><br/>
+			<input type="password" name="pass" id="pass"/><br/><br/>
+			<label for="pass2">Confirmez le mot de passe <br/>
+			<input type="password" name="pass2" id="pass2"/><br/><br/>
+	        <input type="submit" name="register" value="S'inscrire" class="bouton"/>
+				 </form>
+				 </div>
+	         </div>
+	       
+</body>
+</html>

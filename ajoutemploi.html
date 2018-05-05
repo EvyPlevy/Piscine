@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="stylesheet.css"> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Poiret+One|Six+Caps" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+<script src="menuderoulant.js"></script>
+<!-- Coucou mes librairies -->
+</head>
+<body>
+
+
+<div id="nav">
+
+<div class="conteneur">
+
+<div  onclick="myFunction()" class="Vous">Nom prénom
+	<div class="icones"><div class="fontawesome-user"></div>Vous</div>
+	<div id="menuVous" class="elementsMenu">
+		<div class="arrow"></div>
+		<a href="#">Mon profil</a>
+		<a href="deco.php">Déconnexion</a>
+	</div>
+
+</div>
+
+<div class="icones"><div class="fontawesome-bell-alt"></div>Notifs</div>
+<a href="designemploi"><div class="icones"><div class="fontawesome-briefcase"></div>Emplois</div></a>
+<div class="icones"><div class="fontawesome-home"></div>Accueil</div>
+<div class="icones"><div class="fontawesome-search"></div>Rechercher</div>
+</div>
+</div>
+
+
+	        <div id="inscription">
+				<div class="fondinscri">
+					 <form action="ajoutEmploi.php" method="post" class="formu">
+						<div class="inscristoi">Ajouter un emploi</div>
+						<div class="formul">
+						<label for="Nom">Intitulé</label><br/>
+						<input type="text" name="name" id="name"/><br/><br/>
+						<label for="Nom">Nom de l'entreprise </label><br/>
+						<input type="text" name="orga" id="name"/><br/><br/>
+						<div class="conteneur3">
+							<div style="margin-right:40px;">
+								<label for="Nom">Date début</label><br/>
+								<input type="date" name="datedebut" id="name"/>
+							</div>
+							<div style="margin-left:40px;">
+								<label for="Nom">Date fin</label><br/>
+								<input type="date" name="datefin" id="name"/>
+							</div>
+						</div>
+					<br />
+						<div class="conteneur3">
+							<div style="margin-right:40px;">
+								<label for="Nom">Statut</label><br/>
+								<select name="Statut">
+									<option value="null"> </option>
+									<option value="0">Prof</option>
+									<option value="1">ING1</option>
+									<option value="2">ING2</option>
+									<option value="3">ING3</option>
+									<option value="4">ING4</option>
+									<option value="5">ING5</option>
+									<option value="6">ING3 Apprenti</option>
+									<option value="7">ING4 Apprenti</option>
+									<option value="8">ING5 Apprenti</option>
+									<option value="9">Prépac</option>
+								</select>
+								<br/><br/>
+								<label for="Nom">Diplôme</label><br/>
+								<select name="Diplome">
+									<option value="null"> </option>
+									<option value="Baccalauréat">Baccalauréat</option>
+								</select><br />
+								<label for="Nom" style="font-size:13px">Autre diplôme ?</label><br />
+								<input type="text" name="autrediplome" style="font-size:10px;height:12px;" /><br/><br/>
+								<label for="Competence">Compétences</label><br/>
+								<input type="text" name="skill" /><br/><br/>
+								<label for="Nom">Pays</label><br />
+								<input type="text" name="country" />
+							</div>
+							<div style="margin-left:40px">
+								<label for="Nom">Type</label><br/>
+								<select name="type">
+									<option value="0">Projet</option>
+									<option value="1">Stage</option>
+									<option value="2">CDD</option>
+									<option value="3">CDI</option>
+								</select><br /><br />
+								<label for="Nom">Description</label><br/>
+								<textarea name="description" style="height:145px;border: 4px double #DEDEDE">Mettre une description...</textarea><br /> <br>
+								<label for="Nom">Langue</label><br />
+								<input type="text" name="language" />
+							</div>
+							
+						</div>
+						<br/>
+						<label for="Nom">Date d'expiraton de la demande</label><br/>
+						<input type="date" name="dateexp"/><br /><br />
+
+						</div>
+						<input type="submit" name="ajoutEmploi" value="Ajouter" class="bouton"/>
+						
+					 </form>
+				 </div>
+	         </div>
+	       
+</body>
+</html>

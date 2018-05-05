@@ -200,6 +200,7 @@ body
 	min-height : 300px;
 	height: 100%;
 	width : 100%;
+	overflow : auto;
 }
 
 .conteneur2
@@ -207,7 +208,7 @@ body
 	border-top:5px solid #291710;
 	display : flex;
 	min-height : 300px;
-	height : calc(100% - 300px);
+	height : calc(100% - 294px);
 }
 
 .monid
@@ -271,4 +272,147 @@ button
 	left:0;
 	right:0;
 }
+.competences
+{
+	background : #082b3e38;
+}
 
+.diplomes
+{
+		background : #8c89a247;
+}
+
+.CV
+{
+		background : #9c89a240;
+}
+
+.formation{
+		background : #89a29d40;
+}
+
+.langue{
+	background : #89a28c40;
+}
+
+.experience
+{
+		background : #a29f8940;
+}
+
+.benevolat
+{
+	background : #a28f8940;
+}
+
+.associations
+{
+	background : #a2899940;
+}
+
+.projets
+{
+		background : #9589a240;
+}
+
+.projets, .associations, .benevolat, .experience, .langue, .formation, .CV, .diplomes, .competences
+{
+	width : 33%;
+	margin:10px;
+	padding:15px;
+	box-shadow:3px 3px 0px #050D43;
+}
+
+.competences .cont, .diplomes .cont, .formation .cont, .experience .cont, .benevolat .cont, .projets .cont
+{
+	overflow : auto;
+}
+
+.cont 
+{
+	min-height : 50px;
+	padding : 10px;
+}
+a, a:visited, a:hover, a:active {
+    text-decoration:none;
+}
+
+.titresModif
+{
+	width : 110px;
+	padding: 0 10px 10px 10px;
+	font-family : Raleway;
+	font-size:14px;
+}
+
+#inscription
+{
+	width : 800px;
+	height: 500px;
+	border-radius : 10px;
+	background : white;
+	padding : 20px;
+	position : absolute;
+	margin : auto;
+	top : 0;
+	bottom : 0;
+	left:0;
+	right:0;
+	box-shadow: 4px 4px 0px #4A301D;
+}
+.fondinscri
+{
+	background : url('fondConnexion.png');
+	background-size :250px auto;
+	background-repeat : repeat-x;
+	z-index : 10;
+	background-position : center 442px;
+}
+
+.formu
+{
+	text-align : center;
+	margin:auto;
+	top:0;
+	bottom:0;
+	font-family : Abril Fatface;
+	color: #8F92A3;
+	font-size: 20px;
+	font-weight : light;
+}
+
+.formu .inscristoi
+{
+	color: #4A301D;
+    font-size: 50px;
+    font-family: Lobster;
+    background: #DEDEDE;
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    line-height: 15px;
+}
+
+.bouton
+{
+	background: #f9f9f9;
+    border: 1px solid #bfbfbf;
+    padding: 4px;
+}
+
+.conteneur3
+{
+	display : flex;
+	justify-content : center;
+}
+
+.formul
+{
+	overflow : auto;
+	height:397px;
+}
+
+#myDate
+{
+	
+}

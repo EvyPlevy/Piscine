@@ -1,8 +1,10 @@
-<?PHP 
-	define('DB_SERVER', 'localhost');
-	define('DB_USER','root');
-	define('DB_PASS','');
-	$database = "famille";
-	$db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS);
-	$db_found = mysqli_select_db($db_handle,$database);
+<?php
+session_start();
+
+$BDD = mysqli_connect("localhost","root","");
+mysqli_select_db($BDD,"plouf_plouf");
+// On met les variables utilisé dans le code PHP à FALSE (C'est-à-dire les désactiver pour le moment).
+$error = FALSE;
+$registerOK = FALSE;
+
 ?>
